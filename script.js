@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* Typing animation */
 function startTyping(element) {
+  element.innerText = "";
   const message = "From the moment you walked into my life...";
   let index = 0;
 
@@ -46,3 +47,4 @@ function startHearts() {
     setTimeout(() => heart.remove(), 6000);
   }, 500);
 }
+
