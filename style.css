@@ -5,24 +5,28 @@
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
   min-height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
 }
 
-.page {
+.screen {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   padding: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 .card {
-  background: #ffffff;
-  width: 100%;
+  background: white;
   max-width: 380px;
-  padding: 32px 28px;
-  border-radius: 14px;
+  width: 100%;
+  padding: 32px;
+  border-radius: 16px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
@@ -32,50 +36,49 @@ body {
   margin-bottom: 10px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 26px;
-}
-
-.subtitle {
-  color: #555;
-  margin: 8px 0 24px;
-}
-
-.form {
-  display: flex;
-  gap: 10px;
-}
-
 input {
-  flex: 1;
+  width: 100%;
   padding: 12px;
-  font-size: 15px;
+  margin-top: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  outline: none;
-}
-
-input:focus {
-  border-color: #6c63ff;
+  font-size: 15px;
 }
 
 button {
-  padding: 12px 16px;
+  margin-top: 15px;
+  padding: 12px 18px;
   font-size: 15px;
   border-radius: 8px;
   border: none;
-  background: #6c63ff;
-  color: white;
   cursor: pointer;
+  background: #ff5a7a;
+  color: white;
 }
 
 button:hover {
-  background: #574fe0;
+  background: #e84b6b;
 }
 
-.hint {
-  margin-top: 16px;
-  font-size: 13px;
-  color: #888;
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#noBtn {
+  background: #bbb;
+  color: #333;
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
 }
