@@ -3,41 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- LOCK SCREEN -->
-<div id="lockScreen" class="screen">
-  <h1>🔒 Private</h1>
-  <p>This page is only for one special person.</p>
+  <!-- LOCK SCREEN -->
+  <div id="lockscreen" class="screen">
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h1>Private</h1>
+      <p>This page is only for one special person.</p>
 
-  <input
-    type="password"
-    id="passwordInput"
-    placeholder="Enter the password 💌"
-  >
+      <input
+        type="password"
+        id="passwordInput"
+        placeholder="Enter the password 💖"
+      >
+      <button id="unlockBtn">Unlock</button>
 
-  <button id="unlockBtn">Unlock</button>
-  <p id="error"></p>
-</div>
-
-<!-- PROPOSAL SCREEN -->
-<div id="proposalScreen" class="screen hidden">
-  <div class="container">
-    <h1 id="typing"></h1>
-
-    <h2>Will you be my girlfriend? 💖</h2>
-
-    <div class="buttons">
-      <button id="yesBtn">YES 😍</button>
-      <button id="noBtn">No 🙈</button>
+      <p id="error"></p>
     </div>
-
-    <p id="response"></p>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <!-- PROPOSAL SCREEN -->
+  <div id="proposalScreen" class="screen hidden">
+    <div class="card">
+      <h1>Will you be my girlfriend? 💘</h1>
+
+      <div class="buttons">
+        <button id="yesBtn">Yes 😍</button>
+        <button id="noBtn">No 🙈</button>
+      </div>
+
+      <p id="response"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
