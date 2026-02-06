@@ -1,4 +1,4 @@
-// 🔑 CHANGE THIS PASSWORD
+// 🔑 CHANGE PASSWORD HERE
 const PASSWORD = "hername123";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,14 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const proposalScreen = document.getElementById("proposalScreen");
   const error = document.getElementById("error");
   const typingText = document.getElementById("typing");
-  const music = document.getElementById("music");
 
   unlockBtn.addEventListener("click", () => {
     if (passwordInput.value === PASSWORD) {
       lockScreen.classList.add("hidden");
       proposalScreen.classList.remove("hidden");
       startTyping(typingText);
-      music.play();
       startHearts();
     } else {
       error.innerText = "Wrong password 💔 Try again.";
@@ -23,10 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/* Typing animation */
+// Typing animation
 function startTyping(element) {
   const message = "From the moment you walked into my life...";
   let index = 0;
+  element.innerText = "";
 
   const interval = setInterval(() => {
     element.innerText += message[index];
@@ -35,7 +34,7 @@ function startTyping(element) {
   }, 80);
 }
 
-/* Floating hearts */
+// Floating hearts
 function startHearts() {
   setInterval(() => {
     const heart = document.createElement("div");
