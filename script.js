@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       music.play();
       startHearts();
     } else {
-      error.textContent = "Wrong password 💔. Do better ";
+      error.textContent = "Wrong password 💔 Try harder ";
     }
   });
 
@@ -64,4 +64,5 @@ function startHearts() {
     setTimeout(() => heart.remove(), 6000);
   }, 500);
 }
+
 
