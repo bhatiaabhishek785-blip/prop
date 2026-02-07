@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("yesBtn").addEventListener("click", () => {
     document.getElementById("response").textContent =
-      "Yayyy 💖 I knew it!!!";
+      "Yayyy 💖 I knew it!!! Turn around for the real proposal";
   });
 });
 
@@ -64,6 +64,7 @@ function startHearts() {
     setTimeout(() => heart.remove(), 6000);
   }, 500);
 }
+
 
 
 
