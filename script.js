@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
       music.play();
       startHearts();
     } else {
-      error.innerText = "Wrong password 💔 Try again.";
+      error.textContent = "Wrong password 💔 Try again.";
     }
   });
 
-  // Cute No button behavior
+  // Playful NO button
   const noBtn = document.getElementById("noBtn");
   noBtn.addEventListener("mouseover", () => {
     noBtn.style.position = "absolute";
@@ -31,21 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("yesBtn").addEventListener("click", () => {
-    document.getElementById("response").innerText =
+    document.getElementById("response").textContent =
       "Yayyy 💖 I knew it!!!";
   });
 });
 
-/* Typing animation */
+/* ✅ FIXED TYPING FUNCTION */
 function startTyping(element) {
-  element.innerText = "";
+  element.textContent = "";
+
   const message = "From the moment you walked into my life...";
   let index = 0;
 
   const interval = setInterval(() => {
-    element.innerText += message[index];
+    element.textContent = message.substring(0, index + 1);
     index++;
-    if (index === message.length) clearInterval(interval);
+
+    if (index >= message.length) {
+      clearInterval(interval);
+    }
   }, 80);
 }
 
@@ -54,7 +58,7 @@ function startHearts() {
   setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.innerText = "❤️";
+    heart.textContent = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 6000);
