@@ -1,5 +1,5 @@
 // 🔑 CHANGE THIS PASSWORD
-const PASSWORD = "love";
+const PASSWORD = "31july2020";
 
 document.addEventListener("DOMContentLoaded", () => {
   const unlockBtn = document.getElementById("unlockBtn");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       music.play();
       startHearts();
     } else {
-      error.textContent = "Wrong password 💔 Try again.";
+      error.textContent = "Wrong password 💔. Do better ";
     }
   });
 
@@ -64,3 +64,4 @@ function startHearts() {
     setTimeout(() => heart.remove(), 6000);
   }, 500);
 }
+
