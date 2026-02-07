@@ -21,6 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
       error.innerText = "Wrong password 💔 Try again.";
     }
   });
+
+  // Cute No button behavior
+  const noBtn = document.getElementById("noBtn");
+  noBtn.addEventListener("mouseover", () => {
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.random() * 80 + "%";
+    noBtn.style.top = Math.random() * 80 + "%";
+  });
+
+  document.getElementById("yesBtn").addEventListener("click", () => {
+    document.getElementById("response").innerText =
+      "Yayyy 💖 I knew it!!!";
+  });
 });
 
 /* Typing animation */
@@ -47,4 +60,3 @@ function startHearts() {
     setTimeout(() => heart.remove(), 6000);
   }, 500);
 }
-
