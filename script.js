@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function startTyping(element) {
   element.textContent = "";
 
-  const message = "From the moment you walked into my life...";
+  const message = "No rush, take your time (5-10 seconds)";
   let index = 0;
 
   const interval = setInterval(() => {
@@ -64,5 +64,6 @@ function startHearts() {
     setTimeout(() => heart.remove(), 6000);
   }, 500);
 }
+
 
 
